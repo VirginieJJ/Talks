@@ -1,0 +1,95 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
+
+
+
+
+// fonts
+$font-family-sans-serif: "Lato", sans-serif !default;
+$font-family-serif: "Lato", serif !default;
+$font-family-monospace: "Fira Mono", monospace !default;
+
+// colors
+$perso-highlight-color: #69a1b4;
+$body-bg: #fff !default;
+$body-color: #000 !default;
+$link-color: #00008b !default;
+$code-block-bg: #f2f2f2;
+$code-block-font-size: 0.7em;
+
+$presentation-font-smaller: 0.7rem;
+
+/*-- scss:rules --*/
+
+.reveal {
+  h1 {
+    color: $perso-highlight-color;
+  }
+}
+
+.reveal {
+  .caption {
+    .small-cap {
+      font-size: 0.5em;
+    }
+  }
+  h2 {
+    font-family: "Fira Mono";
+    color: $perso-highlight-color;
+  }
+  
+  img + p {
+    margin-top: 0.5em;
+  }
+  
+  .columns {
+    p {
+      margin-top: 0.5em ;
+    }
+    .column {
+      ul {
+        display: initial;
+      }
+    }
+  }
+}
+
+
+
+.author, .date {
+  font-size: 34px;
+}
+
+.hl {
+  color: $perso-highlight-color;
+}
+
+.make-smaller {
+  font-size: 0.7em;
+}
+
+
+// Tweaks for callout in .smaller slides
+
+.reveal {
+    section.slide.smaller {
+        div.callout-title {
+            div.callout-icon-container {
+                & + p {
+                    display: table;
+                    text-align: center;
+                    strong {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+    .callout.callout-titled .callout-icon::before {
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,339 @@
+---
+title: "Un aperçu des Rencontres R 2023"
+lang: fr
+subtitle: Avignon, du 21 au 23 juin 2023
+author: "Virginie Jouffret"
+institute: "Plateforme BigA, CBI, CNRS"
+date: 07/03/2023
+title-slide-attributes:
+  data-background-image: "logo/bigA.jpg"
+  data-background-size: 25%
+  data-background-position: 55% 50%
+format:
+  revealjs:
+    theme: [default, "q-theme.scss"]
+    slide-number: c/t
+    logo: "logo/bigA.jpg"
+    footer: "[Virginie Jouffret]()"
+    code-copy: true
+    center-title-slide: false
+    include-in-header: heading-meta.html
+    code-link: true
+    code-overflow: wrap
+    highlight-style: a11y
+    height: 1080
+    width: 1920
+    preview-links: auto
+    multiplex: true
+    preload-iframes: true
+    controls: true
+    controls-layout: edges
+---
+
+## Avignon, la cité des Papes et du PAC !
+
+![Bannières des Rencontres R 2023.](images/Banner_Rencontres_R_Avignon_2023_logo_980.png){fig-alt="Bannière des Rencontres R à Avignon" fig-align="center"}
+
+
+## Quarto : mis en avant par Christophe Dervieux (Posit), github : cderv {.smaller}
+
+[Pourquoi Quarto]{.hl}: 
+
+* nouveau système de publication scientifique et technique Open-Source
+
+* basé sur Pandoc 
+
+* outil ligne de commande (CLI)
+
+
+```{.bash filename="Terminal"}
+quarto render document.qmd --to html
+```
+
+<br />
+
+![Illustration de la présentation "Hello, Quarto" par Julia Lowndes et Mine Çetinkaya-Rundel, présentée à la conférence RStudio 2022. Illustré par Allison Horst.](images/horst_quarto_schematic.png){fig-alt="Un schéma représentant la polyvalence de Quarto en matière d'entrée multilingue (par exemple Python, R, Observable, Julia) et de sortie multiformat (par exemple PDF, html, documents Word, et plus encore)." fig-align="center"}
+
+
+## Quarto themes, _powered by SASS_ (1/2)
+
+Sass <https://sass-lang.com>: un langage d’extension CSS, utilisé par Bootstrap et Reveal JS
+
+* basé sur un [unique fichier]{.hl} et des [décorateurs de régions]{.hl}
+
+### Exemple de fichier de Thème
+
+```{.scss filename="perso.scss" code-line-numbers="|1,6|4,9|7-10"}
+/*-- scss:defaults --*/ 
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+$custom-color: blue;
+
+/*-- scss:rules --*/
+h1, h2, h3, h4, h5, h6 {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+  color: $custom-color;
+}
+```
+
+Accès aux variables Bootstrap et aux variables spécifiques Quarto ! 
+
+::: footer
+[Bootstrap SASS variables](https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss) / [Quarto SASS variables](https://quarto.org/docs/output-formats/html-themes.html#sass-variables) / [source Github cderv](https://cderv.github.io/rr-2023-quarto-html-theming/#/fichier-de-th%C3%A8me-quarto) 
+:::
+
+
+## Quarto themes (2/2)
+
+-   [https://quarto.org/docs/gallery/](https://quarto.org/docs/gallery/)
+-   [https://github.com/juba/bookup-html](https://github.com/juba/bookup-html)
+-   [https://bootswatch.com/](https://bootswatch.com/)
+
+
+# R in the Dataviz Universe de Yan Holtz
+
+![source : Yan Holtz](images/yan_holtz.png)
+
+## Dataviz World
+
+![source : Yan Holtz](images/yan_holtz_dataviz_wolrd.png)
+
+## No code
+
+![Datawrapper (https://www.datawrapper.de/), source : Yan Holtz ](images/datawrapper.png){fig-alt="exemple de graphes issus de Datawrapper" fig-align="center"}
+
+## ggplot2 et ses avantages
+
+![source : Yan Holtz](images/R_ggplot2_avantage.png){fig-alt="exemple de graphes avec R ggplot2" fig-align="center"}
+
+<br> 
+
+### Exploratory --> Explanatory {.center}
+
+## Pinterest de Dataviz & être original {.scrollable}
+
+-   [Extension de ggplot2](https://exts.ggplot2.tidyverse.org/gallery/)
+-   Cédric Scherer (https://www.cedricscherer.com/top/dataviz/)
+-   Tanya Shapiro (https://www.tanyashapiro.com/)
+-   ![dataviz-inspiration.com](https://www.dataviz-inspiration.com/)
+
+
+![](images/dataviz-inspiration.png){fig-alt="" fig-align="center"}
+
+## Dataviz World
+
+![](images/yan_holtz_dataviz_wolrd.png)
+
+## Alternative à Shiny, a-t-on toujours besoin d'un serveur R ?
+
+![](images/yan_holtz_do_we_need_shiny.png)
+
+
+
+# Développement
+
+<!-- ## 5 Best practices for administering RStudio in production -->
+
+<!-- 1. Keep your operating systems and browsers up to date -->
+<!-- 2. Plan to support multiple versions of R by building R from source [posit Support](https://support.posit.co/hc/en-us/articles/215488098-Installing-multiple-versions-of-R-on-Linux) -->
+<!-- 3. Organize your R packages for reliability and consistency -->
+<!-- 4. Use root privileges to install and run RStudio products -->
+<!-- 5. Securely manage your R programmers and end users -->
+
+
+## Posit Package Manager
+
+<br> 
+
+-   CRAN, bioconductor, pypi
+-   <https://packagemanager.posit.co/client/#/repos/2/overview>
+-   Figer la date du CRAN, un plus à {renv}
+
+<br>
+
+```{terminal}
+options(repos = c(REPO_NAME = "https://packagemanager.posit.co/cran/2023-04-03"))
+```
+
+
+
+## {golem} & {fusen} & {lozen}, de Sébastien Rochette, Yohann Mansiaux & Florence Mounier (ThinkR) {.scrollable}
+
+[Slides]{.hl}: [github statnmap](https://github.com/statnmap/prez/blob/master/2023-06-22_RR2023_golem-fusen.pdf)
+
+-    {golem}: transforme un .Rmd en Shiny App / package  
+-    {fusen}: rempli un fichier Rmarkdown pour le transformer en package
+-    {lozen}: centralise les outils de management de projet + génère un rapport quotidien/hebdommadaire du projet (pour git/gitlab)
+
+
+<iframe src="docs/2023-06-22_RR2023_golem-fusen.pdf" width="100%" height="100%"> </iframe>
+
+
+
+## Packages
+
+### Data validation packages 📦
+
+-   [{validate}](https://github.com/data-cleaning/validate) : vérifie la concordance des données 
+-   [{assertr}](https://github.com/ropensci/assertr) : vérifie des hypothèses
+-   [{data.validator}](https://appsilon.github.io/data.validator/): crée un rapport
+-   [{pointblank}](https://rich-iannone.github.io/pointblank/)
+-   [{diffify}](https://diffify.com/): indique les différences entre 2 versions de packages
+-   [{renv}](https://rstudio.github.io/renv/articles/renv.html): vous connaissez déjà ! 😁
+
+
+### Autres
+
+-   Entrainement GIT: <https://learngitbranching.js.org/?locale=fr_FR>
+-   [{lintr}](https://github.com/r-lib/lintr) : vérifie les règles d'écriture comme PEP8 en Python
+<!-- Dreamr {esquisse} {prefixer} -->
+-   [{gitlabr}](https://github.com/statnmap/prez/blob/master/2022-11-21_gestion_de_gitlab_automatisee_avec_gitlabr.pdf)
+
+
+# et des talks sur des sujets variés ...
+
+## {fdacluster} : Clustering de données fonctionnelles de Aymeric Stamm {.scrollable}
+
+-   clustering et alignement des données, [https://astamm.github.io/fdacluster/](https://astamm.github.io/fdacluster/)
+- calcul de moyennes mobiles {rjd3filters}, {rjd3toolkit} (Alain Quartier-la-Tente)
+
+
+<iframe src="https://astamm.github.io/fdacluster/" width="100%" height="100%"> </iframe>
+
+
+
+## L’écosystème spatial de R de Timothée Giraud
+
+[Slide](https://rcarto.github.io/RencontresR_2023/#/title-slide)
+
+[Les données spatiales :]{.hl}
+
+-   Raster: image localisée dans l'espace & pixélisée
+-   Vecteur: défini par un identifiant unique
+
+[Quelques packages :]{.hl}
+
+-   [{spocc}](https://github.com/ropensci/spocc) : occurrence d'espèces
+-   [{rdhs}](https://github.com/ropensci/rdhs): données de santé
+-   [{sf}](https://r-spatial.github.io/sf/) : rotondité des données spatiales & géométriques
+-   {stars}, {terra}, {ggspatial}, {spatstat}, {leaflet}, {RayShader}
+-   [{forecast}](https://pkg.robjhyndman.com/forecast/) : série temporelle, The R package forecast provides methods and tools for displaying and analysing univariate time series forecasts including exponential smoothing via state space models and automatic ARIMA modelling.
+
+
+## Syndrome de l'imposteur, Aurélie Vache
+
+<br> 
+
+"I never lose, I either *win* or *learn*", Nelson Mandela
+
+<br> 
+
+### Késako ?!
+
+![source Aurélie Vache (<https://www.youtube.com/watch?v=tvEVD4DyzpY>)](images/imposteur_aurelie_vache.png)
+
+
+## Quelques règles:
+
+1.   Des connaissances, des compétences, des victoire, tu as
+2.   Des amis, des pairs, des communautés, tu trouveras
+3.   Partager et contribuer, tu pourras
+4.   Du feedback plutôt que la validation, tu demanderas
+5.   Du Pair-Programming, tu feras
+6.   T'accepter tu dois
+7.   Sois fier de toi tu dois 
+
+source Aurélie Vache <https://www.youtube.com/watch?v=tvEVD4DyzpY>
+
+
+## Autres : {.scrollable}
+
+<br> 
+
+### Data Science without the data - Rhian Davies (Jumping Rivers)
+
+<!-- * Rédiger un plan d'analyse statistique détaillé sans avoir vu de données -->
+<!-- * Commencer le développement avec un petit sous-ensemble de données -->
+<!-- * Nous ne pouvons jamais voir les données pour l'Allemagne -->
+
+<br> 
+
+### Récupérer des métadonnées de fichiers .mp3 pour Mr Moustache, Antoine Languillaume (ThinkR)
+
+-   [{tesseract}](https://cran.r-project.org/web/packages/tesseract/vignettes/intro.html) : Extract Text from Images
+-   {mutagen}
+
+<br> 
+
+## La tech, et si on faisait un cluster de RasberryPi, Philippe Regnault
+n
+-   meRoo : Un écosystème logiciel pour l’apprentissage des sciences des données installé sur un cluster de Raspberry Pi
+
+
+![Cluster oracle de 1050 Raspberry pi, source : https://github.com/oracle-devrel/picluster ](https://github.com/oracle-devrel/picluster/raw/main/images/CodeOneSF2019-70.jpg)
+
+
+## Les Why Not !
+
+-  {wesanderson}: palettes de couleur, similaire à {MetBrewer}
+-  {gouvdown}: theme gouvernemental
+-  {bbplot}: ggplot in the style used by the BBC News data team
+-  {shinymeta} : générer le code R dans l'application Shiny pour reproduire l'analyse
+-  {flextable}; alternative à {table1} & {gtsummary}
+-  {blastula} : écrire un mail en cas d'erreur
+-  openBSD : {Rserve} & {vmm} par André Buskvekster
+
+
+
+
+
+## Les tidymodels
+
+
+[Slides]{.hl} : [Github abichat](https://github.com/abichat/rr23-tuto-tidymodels)
+
+
+
+## {tabnet} : deep learning tabulaire intégré à tidymodels de Christophe Regouby (Airbus)
+
+- ajout de torch dans R depuis pytorch (+ cheatsheet en fr + en)
+- intégré au MLverse: ![](https://github.com/mlverse)
+
+
+## Merci
+
+![source: memegenerator.es](images/end.jpg)
+
+
+<!-- ## brouillon -->
+
+<!-- ## Alternative à Rcpp -->
+
+<!-- -   [{pybing11}](https://github.com/pybind/pybind11) -->
+<!-- -   [{reticulate}](https://rstudio.github.io/reticulate/) -->
+
+
+<!-- RTE életricité - Valentin Cadoret -->
+<!-- {Dnemio}, {opendatasoftAPI} -->
+
+<!-- ## DB noSQL -->
+
+<!-- les avantages ou non de MongoDB par Colin Fay -->
+<!-- {mongolite} -> {mongooser}  -->
+
+<!-- RKeOps - Amélie Vernay -->
+<!-- LazyTensors dans le cas d'interpolation à noyaux -->
+
+<!-- Computo - github computorg/RR2023, journal de stat ? -->
+
+<!-- {patchwork} -->
+
+<!-- autoimport : gérer l’enfer des imports de Dan Chatiel -->
+
+<!-- tableaux avec flextable , David Gohel -->
+
+<!-- happign de Paul CArteron,  -->
+
+<!-- ggiraph et shiny de David Gohel  -->
+
+
