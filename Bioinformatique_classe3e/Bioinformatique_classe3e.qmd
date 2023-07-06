@@ -1,0 +1,116 @@
+---
+title: "La Bioinformatique"
+author: "Virginie JOUFFRET"
+format:
+  revealjs: 
+    theme: serif
+    css: custom.css
+    fig-align: center
+---
+
+## La vie & l'arbre du vivant
+
+![](img/1.2.69%20Charles%20Darwins%20tree%20of%20life%20from%20primordial%20forms.jpg){fig-align="center"}
+
+## Une vision "plus complète" de l'arbre du vivant
+
+![](img/41564_2016_Article_BFnmicrobiol201648_Fig1_HTML.jpg){fig-align="center"}
+
+# Qu'est ce qu'il différencie ces organismes ?
+
+## L'ADN (= génome)
+
+![](img/dna.png){fig-align="center"}
+
+## Les cellules
+
+![](img/cells-animal-plant-ways-nucleus-difference-organelles.webp){fig-align="center"}
+
+## Les gènes présents sur l'ADN
+
+![](img/23064-dna-genes-chromosomes.webp){fig-align="center"}
+
+## L'ADN au sein du vivant :
+
+::: dfinline
+| Organisme                           | Longueur du génome (en bases) |
+|-------------------------------------|------------------------------:|
+| Maïs (*Zea mays*)                   |                 5 000 000 000 |
+| Homme (*Homo sapiens*) (2m de long) |                 3 400 000 000 |
+| Mouche (*Drosophila melanogaster*)  |                   118 000 000 |
+| Levure (*Saccharomyces cerevisiae*) |                    12 000 000 |
+| La Bactérie *Escherichia coli*      |                     4 640 000 |
+| Virus de la Grippe                  |                        13 000 |
+| Covid SARS-CoV-2                    |                        30 000 |
+:::
+
+## Oui mais ...
+
+![](img/papillon.webp)
+
+## et aussi :
+
+![](img/14776744-human-body-cells.webp){fig-align="center"}
+
+## Une espèce = Un génome mais plusieurs phénotypes (\~ apparences)
+
+![](img/proteome_complexity.jpeg){fig-align="center"}
+
+# Connaissez-vous des protéines ?
+
+## Les protéines dans l'alimentation
+
+![](img/INFOGRAPHIE-CHARAL-PROTEINE-V3-1024x888.jpg){width="576"}
+
+## La GFP ou protéine fluorescente verte
+
+![](img/gfp.jpeg)
+
+## Le rôle des protéines : La baudroie abyssale de Johnson
+
+![](img/nemo.jpg)
+
+## Mais aussi les facteurs environnementaux :
+
+![](img/Microbiology-of-extreme-environments.webp)
+
+## Le sujet de mon doctorat
+
+<a href="https://www.youtube.com/watch?v=48QKVFmdUns">YouTube</a>
+
+[![](img/sol_river_etm.png)](https://www.youtube.com/watch?v=48QKVFmdUns)
+
+## Les données
+
+![](img/these_mat&met.png){width="530"}
+
+## Comment on analyse les protéines
+
+![](img/metap.png)
+
+## Comment on analyse les protéines (2)
+
+![](img/bioinfo.png)
+
+## Les micro-organismes identifiés
+
+![](img/metap_metag.png)
+
+## Leurs fonctions
+
+![](img/thse-fct.png)
+
+## Les bases de données d'organismes
+
+comme un instagram du vivant :
+
+<a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=9606">NCBI Taxonomy</a>
+
+## Proximité des organismes
+
+![](img/circos.png){fig-align="center"}
+
+
+# Merci
+
+
